@@ -1,0 +1,2 @@
+<app-letter *ngFor="let letter of (letters | async); let i = index;" (successEmiter)="onSuccessLetter($event)"
+    [letter]="letter" [index]="i" [choice]="lastGiven | async"></app-letter>

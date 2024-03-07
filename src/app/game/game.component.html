@@ -1,0 +1,13 @@
+<div class="content">
+  <div class="left-side">
+    <app-result [word]="guessWord | async" [letter]="choiceHandler | async" (success)="wordGuessed()"></app-result>
+    <p class="wrong-letters">Incorrect: <span *ngFor="let wrong of incorrectLetters">{{wrong}}</span></p>
+    <app-keyboard (emitLetter)="onChoice($event)"></app-keyboard>
+    <button *ngIf="canGoOn" class="next-level" (click)="goOn()">{{buttonTXT}}</button>
+  </div>
+  <div class="divider" role="separator" aria-label="Divider"></div>
+  <div class="right-side">
+    <app-progress [currentLevel]="level | async" [maxLevel]="maxLevel"></app-progress>
+    <app-hangman [triggerConsume]="hangmanTrigger | async"></app-hangman>
+  </div>
+</div>

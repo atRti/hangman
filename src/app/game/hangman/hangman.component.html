@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="400" height="600" viewBox="0 0 400 600" xml:space="preserve">
+    <!--poziom sz-->
+    <line style="stroke:rgb(0,0,0); stroke-width: 15; fill: rgb(0,0,0); fill-rule: nonzero; opacity: 1;"
+        [class.wood-arm]="isGallows | async" x1="70" y1="50" x2="361" y2="50" />
+    <!--pion sz-->
+    <line style="stroke: rgb(0,0,0); stroke-width: 15; fill: rgb(0,0,0); fill-rule: nonzero; opacity: 1;"
+        [class.wood-vertical]="isGallows | async" x1="353.5" y1="51.7" x2="353.5" y2="561.7" />
+    <!--podstawa-->
+    <line style="stroke: rgb(0,0,0); stroke-width: 15; fill: rgb(0,0,0); fill-rule: nonzero; opacity: 1;"
+        [class.wood-base]="isGallows | async" x1="377" y1="561" x2="185" y2="561" />
+    <!--belka skośna-->
+    <line style="stroke: rgb(0,0,0); stroke-width: 15; fill: rgb(0,0,0); fill-rule: nonzero; opacity: 1;"
+        [class.wood-support]="isGallows | async" x1="257" y1="49" x2="356" y2="157" />
+    <!--lina-->
+    <line [class.line]="isGallows | async" style="stroke: rgb(0,0,0); stroke-width: 4; fill: rgb(0,0,0); fill-rule: nonzero; opacity: 1;"   x1="185" y1="58" x2="185" y2="107" />
+    <!--głowa-->
+    <circle  class="hangman" style="stroke: rgb(0,0,0); stroke-width: 8; fill: none; fill-rule: nonzero; opacity: 1;"
+        [class.active]="isHeadVisible | async" cx="186" cy="160" r="50" />
+    <circle  class="hangman" style="stroke: rgb(0,0,0); stroke-width: 8; fill: none; fill-rule: nonzero; opacity: 1;"
+        [class.active]="isLeftLegVisible | async" cx="171" cy="155" r="5" />
+    <circle  class="hangman" style="stroke: rgb(0,0,0); stroke-width: 8; fill: none; fill-rule: nonzero; opacity: 1;"
+        [class.active]="isLeftLegVisible | async" cx="202" cy="155" r="5" />
+    <line [class.active]="isLeftLegVisible | async" style="stroke: rgb(0,0,0); stroke-width: 4; fill: rgb(0,0,0); fill-rule: nonzero; opacity: 1;"
+        x1="170" y1="184" x2="206" y2="174" class="hangman"/>
+    <!--tułów-->
+    <line class="hangman" style="stroke: rgb(0,0,0); stroke-width: 8; fill: rgb(0,0,0); fill-rule: nonzero; opacity: 1;"
+        [class.active]="isBodyVisible | async" x1="187" y1="214" x2="187" y2="348">
+    </line>
+    <!--ręka lewa-->
+    <path class="hangman" style="stroke: rgb(0,0,0); stroke-width: 8; fill: none; fill-rule: nonzero; opacity: 1;"
+        [class.active]="isLeftHandVisible | async" transform=" translate(2, 1)" d="M 185 245 Q 148 243 90 330" stroke-linecap="round" />
+    <!--ręka prawa-->
+    <path class="hangman" style="stroke: rgb(0,0,0); stroke-width: 6; fill: none; fill-rule: nonzero; opacity: 1;"
+        [class.active]="isRightHandVisible | async" transform=" translate(0, 0)" d="M 186 245 Q 260 240 275 340" stroke-linecap="round" />
+    <!--noga lewa-->
+    <path class="hangman" style="stroke: rgb(0,0,0); stroke-width: 8; fill: none; fill-rule: nonzero; opacity: 1;"
+        [class.active]="isLeftLegVisible | async" transform=" translate(-1, 2)" d="M 185 346 Q 116 397 116 487" stroke-linecap="round" />
+    <!--noga prawa-->
+    <path class="hangman" style="stroke:rgb(0,0,0); stroke-width: 8; fill: none; fill-rule: nonzero; opacity: 1;"
+        [class.active]="isRightLegVisible | async" transform=" translate(2, 9)" d="M 188 342 Q 262 405 238 485" stroke-linecap="round" />
+</svg>

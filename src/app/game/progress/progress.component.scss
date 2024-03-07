@@ -1,0 +1,13 @@
+.pill-group {
+    flex-wrap: nowrap;
+}
+
+.pill {
+    --pill-accent: var(--gray-700);
+    &.passed {
+        --pill-accent: var(--green);
+    }
+    &.current {
+        --pill-accent: var(--bright-blue);
+    }
+  }

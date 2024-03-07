@@ -1,0 +1,18 @@
+.wrong-letters {
+    padding: 2rem 0;
+    font-weight: bold;
+    color: var(--orange-red);
+    span {
+        padding: 0 1rem;
+    }
+}
+
+.next-level {
+    width: 100%;
+    background: color-mix(in srgb, var(--green) 25%, transparent);
+    color: var(--green);
+    margin-top: 2rem;   
+    border-radius: .5rem;
+    cursor: pointer;
+    padding: .5rem 0;
+}
